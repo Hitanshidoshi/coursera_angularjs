@@ -1,0 +1,52 @@
+<!-- {{InfoCtrl.firstname}} -->
+<span ng-if="!myInfoCtrl.registered"><a ui-sref="public.signup">Sign Up Now</a></span>
+<table ng-if="myInfoCtrl.registered" id="table_info">
+    <tr class="table_row">
+    <td class="table_data">Firstname</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.infoData[0]}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Lastname</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.infoData[1]}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Email</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.infoData[2]}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Phone</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.infoData[3]}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Favorite Dish</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.infoData[4]}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Dish Image</td>
+    <td></td>
+    <td class="table_data">
+      <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.specificData[0].short_name}}.jpg" alt="{{myInfoCtrl.specificData[0].name}}"></td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Favorite Dish name</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.specificData[0].name}}</td>
+    </tr>
+
+    <tr class="table_row">
+    <td class="table_data">Favorite Dish description</td>
+    <td></td>
+    <td class="table_data">{{myInfoCtrl.specificData[0].description}}</td>
+    </tr>
+</table>
